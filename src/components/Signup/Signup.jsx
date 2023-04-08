@@ -1,5 +1,5 @@
 import React from "react";
-import "./login.css";
+import "./sign.css";
 const Login = () => {
   return (
     <>
@@ -12,7 +12,7 @@ const Login = () => {
           <div className="login_main_title2">
             <div className="login-line"></div>
             <div>
-              <h1 className="login-sign-heading">Sign In with your Email</h1>
+              <h1 className="login-sign-heading">Sign Up with your Email</h1>
             </div>
             <div className="login-line"></div>
           </div>
@@ -26,6 +26,13 @@ const Login = () => {
               ></input>
             </div>
             <div className="login-heading">
+              <h1 className="login-heading-title">Username</h1>
+              <input
+                className="login-heading-input"
+                placeholder="Insert your username"
+              ></input>
+            </div>
+            <div className="login-heading">
               <h1 className="login-heading-title">Password</h1>
               <input
                 className="login-heading-input"
@@ -35,7 +42,7 @@ const Login = () => {
           </div>
 
           <div className="login-button">
-            <button className="login-button-signup">Login In</button>
+            <button className="login-button-signup">Sign Up</button>
             <div className="login-button-signin">
               <h1 className="login-button-heading">Don't have an account?</h1>
               <a className="login-register-heading" href="#">Register</a>
