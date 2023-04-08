@@ -36,8 +36,9 @@ export const Contest_page = () => {
       </div>
 
         {/* make routes here */}
-
-      <Contest_home/>
+        <div className='main-contest-page-content'>
+            <Leaderboard/>
+        </div>
 
 
 

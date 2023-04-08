@@ -154,3 +154,68 @@
   font-weight: 600;
   font-size: 15px;
 }
+
+.main-page-submit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+}
+
+.main-page-submit-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #272d37;
+}
+
+.main-page-submit-form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main-page-submit-form-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.main-page-submit-form-input input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.main-page-submit-form-input submit {
+  display: inline-block;
+  background-color: #437ef7;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px #ffffff;
+}
+
