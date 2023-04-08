@@ -5,7 +5,7 @@ import Contest_home from './Contest_home';
 import Submit from './Submit';
 import Leaderboard from './Leaderboard';
 
-export const Contest_page = () => {
+const Contest_page = () => {
   const [activeButton, setActiveButton] = useState('home');
   
   const handleButtonClick = (buttonName) => {
@@ -48,3 +48,5 @@ export const Contest_page = () => {
     </div>
   )
 }
+
+export default Contest_page;

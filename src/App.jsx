@@ -10,7 +10,8 @@ import {
   Navigate,
   Outlet,
 } from "react-router-dom";
-import { Contest_page } from "./components/Contest_Page/Contest_page";
+import Contest_page from "./components/Contest_Page/Contest_page";
+import History from "./components/History/History";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="contest" element={<Contest />} />
           <Route path="contest_page" element={<Contest_page/>}/>
+          <Route path="history" element={<History/>} />
         </Routes>
       </BrowserRouter>
     </div>
