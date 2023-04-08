@@ -4,17 +4,19 @@ const authRoutes = require('./routes/authRoutes');
 const challengeRoutes = require('./routes/challengeRoutes');
 const rewardRoutes = require('./routes/rewardRoutes');
 const morgan=require('morgan');
+const cors=require('cors')
 
 const app = express();
 
-  app.use(morgan('dev'));
+app.use(cors())
+app.use(express.json());
+app.use(morgan('dev'));
 
 // Connect to MongoDB database
 connectDB();
 
 
 // Middleware for parsing JSON in request body
-app.use(express.json());
 
 app.use((req, res, next) => {
   console.log('Hello from the middleware 👋');
