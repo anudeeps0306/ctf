@@ -10,6 +10,8 @@ import {
   Navigate,
   Outlet,
 } from "react-router-dom";
+import { Contest_page } from "./components/Contest_Page/Contest_page";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route path="auth" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="contest" element={<Contest />} />
+          <Route path="contest_page" element={<Contest_page/>}/>
         </Routes>
       </BrowserRouter>
     </div>

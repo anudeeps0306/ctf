@@ -39,6 +39,13 @@ const Login = () => {
                 placeholder="Insert your password"
               ></input>
             </div>
+            <div className="login-heading">
+              <h1 className="login-heading-title">Conform Password</h1>
+              <input
+                className="login-heading-input"
+                placeholder="Insert your password again"
+              ></input>
+            </div>
           </div>
 
           <div className="login-button">
