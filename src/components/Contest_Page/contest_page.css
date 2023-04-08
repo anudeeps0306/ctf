@@ -1,61 +1,156 @@
-.main-contest-page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+.main-contest-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
-.main-contest-page-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 120%;
+.main-contest-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+  height: 50%;
 }
 
-.main-content-page-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.main-contest-page-content-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.main-contest-page-switch{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 20%;
+.main-content-page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.author-name{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    color: #437EF7;
+.main-contest-page-switch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+  width: 100%;
+  height: 20%;
 }
 
-.main-content-page-title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 1rem;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    text-align: center;
-    letter-spacing: -0.01em;
-    color: #272D37;
+.author-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #437ef7;
+}
+
+.main-content-page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #272d37;
+}
+
+.main-content-page-paragraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #5f6d7e;
+  margin: 1rem;
+}
+
+.main-button-for-contest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 46px;
+  background: #437ef7;
+  border-color: #ffffff;
+  box-shadow: 0px 1px 2px #ffffff;
+  border-radius: 6px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.main-contest-page-switch button.active {
+  background-color: #437ef7;
+  color: #ffffff;
+  box-shadow: 0px 1px 2px #ffffff;
+}
+
+.main-contest-page-switch button:not(.active) {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #437ef7;
+  box-shadow: none;
+}
+
+.main-contest-page-switch button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 46px;
+  background-color: #437ef7;
+  border-color: #ffffff;
+  box-shadow: 0px 1px 2px #ffffff;
+  border-radius: 6px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+.main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 46px;
+  background-color: #ffffff;
+  border: 1px solid #437ef7;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-top: 20px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
 }
