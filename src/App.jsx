@@ -1,8 +1,8 @@
-// export default App
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
+import Contest from "./components/Contest/Contest";
 import {
   BrowserRouter,
   Routes,
@@ -17,8 +17,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="login" element={<Login />} />
+          <Route path="auth" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="contest" element={<Contest />} />
         </Routes>
       </BrowserRouter>
     </div>
