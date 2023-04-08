@@ -1,0 +1,89 @@
+.contest-main-table {
+    width: 100%;
+    margin-top: 24px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.contest-main-table thead {
+  background-color: #f7f7f7;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.1px;
+  color: #437ef7;
+}
+
+.contest-main-table th,
+.contest-main-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contest-main-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contest-main-table tr:hover {
+  background-color: #f7f7f7;
+}
+
+.contest-main-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.contest-main-table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.contest-main-table .rank {
+  width: 10%;
+}
+
+.contest-main-table .username {
+  width: 30%;
+}
+
+.contest-main-table .penalty {
+  width: 30%;
+}
+
+.contest-main-table .score {
+  width: 30%;
+}
+
+.table-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.table-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 36px;
+  background-color: #ffffff;
+  border: 1px solid #437ef7;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 0 10px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.1px;
+  color: #437ef7;
+}
+
+.table-buttons button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
