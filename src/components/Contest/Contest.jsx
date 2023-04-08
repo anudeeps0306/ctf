@@ -69,7 +69,7 @@ const Contest = () => {
                   author={contest.contest.author} // pass author instead of description
                   when={contest.contest.when}
                   startTime={contest.contest.start_time}
-                  url={contest.contest.url}
+                  // url={contest.contest.url}
                 />
               </Link>
             </div>

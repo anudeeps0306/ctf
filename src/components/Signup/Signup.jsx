@@ -6,6 +6,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleemailChange = (e) => {
@@ -18,6 +19,9 @@ const Login = () => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
   };
   // const handleSignup = () => {
   //   axios.post('/api/login', { email,username, password })
@@ -32,8 +36,8 @@ const Login = () => {
   // };
   const handleSignup = (e) => {
     e.preventDefault();
-    const data = { email: email,username:username, password: password };
-    fetch("/api/signup", {
+    const data = { email: email,username:username, password: password ,confirmPassword:confirmPassword};
+    fetch("http://localhost:5000/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -94,6 +98,8 @@ const Login = () => {
               <input
                 className="login-heading-input"
                 placeholder="Insert your password again"
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
               ></input>
             </div>
           </div>
