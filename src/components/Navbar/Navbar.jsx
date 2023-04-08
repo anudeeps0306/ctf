@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "../../Redux/features/userSlice";
 
-function Navbar() {
+const  Navbar=() =>{
+
+  // const { user } = useSelector((state) => state.user);
   return (
     <div className="navbar">
       <div className="navbar-main-div">
@@ -30,7 +34,9 @@ function Navbar() {
         <Link to='/auth'>
           <button className="navbar__button_login">Login</button>
         </Link>
+        <button className="navbar__button_login" >Logout</button>
       </div>
+
     </div>
   );
 }
