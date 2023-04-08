@@ -1,32 +1,37 @@
 import React, { useState } from "react";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+
+  const navigate=useNavigate();
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
+  const handleemailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = () => {
-    axios.post('/api/login', { username, password })
-      .then(response => {
-        const token = response.data.token;
-        localStorage.setItem('token', token);
-        // Redirect to dashboard or home page
-      })
-      .catch(error => {
-        setError(error.response.data.message);
-      });
+  const handleLogin = (e) => {
+    console.log("first")
+    e.preventDefault();
+    const data = { email: email, password: password };
+    fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((response) => { navigate('/'); localStorage.setItem("token", token); response.json()})
+      .then((data) => console.log("dfghyjuikjhgfcdfghjkj"))
+      .catch((error) => console.error(error));
   };
   return (
     <>
@@ -50,9 +55,9 @@ const Login = () => {
               <input
                 className="login-heading-input"
                 placeholder="Insert your email"
-                name="username"
-                value={username}
-                onChange={handleUsernameChange}
+                name="email"
+                value={email}
+                onChange={handleemailChange}
               ></input>
             </div>
             <div className="login-heading">

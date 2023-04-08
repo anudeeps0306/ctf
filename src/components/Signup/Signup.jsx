@@ -1,8 +1,12 @@
 import React,{useState} from "react";
 import "./sign.css";
+import { useNavigate } from "react-router-dom";
+
+
 
 
 const Login = () => {
+  const navigate=useNavigate();
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -35,6 +39,7 @@ const Login = () => {
   //     });
   // };
   const handleSignup = (e) => {
+    console.log("first")
     e.preventDefault();
     const data = { email: email,username:username, password: password ,confirmPassword:confirmPassword};
     fetch("http://localhost:5000/api/auth/register", {
@@ -42,7 +47,7 @@ const Login = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {navigate('/'); response.json();console.log("first")})
       .then((data) => console.log(data))
       .catch((error) => console.error(error));
   };
