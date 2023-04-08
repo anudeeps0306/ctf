@@ -4,7 +4,8 @@ import background from "../../assets/background.png";
 
 const Contest_home = () => {
   return (
-    <div className="main-contest-page-content">
+    // <div className="main-contest-page-content">
+    <>
       <div className="main-contest-page-content-title">
         <h1 className="author-name">Anudeep Sanapala</h1>
         <h1 className="main-content-page-title">Contest Title</h1>
@@ -22,7 +23,7 @@ const Contest_home = () => {
       <div>
         <button className="main-button-for-contest">Catch the Flag</button>
       </div>
-    </div>
+    </>
   );
 };
 
