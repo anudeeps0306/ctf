@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.css";
+
+
+
+
 const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = () => {
+    axios.post('/api/login', { username, password })
+      .then(response => {
+        const token = response.data.token;
+        localStorage.setItem('token', token);
+        // Redirect to dashboard or home page
+      })
+      .catch(error => {
+        setError(error.response.data.message);
+      });
+  };
   return (
     <>
       <div className="login">
@@ -23,6 +50,9 @@ const Login = () => {
               <input
                 className="login-heading-input"
                 placeholder="Insert your email"
+                name="username"
+                value={username}
+                onChange={handleUsernameChange}
               ></input>
             </div>
             <div className="login-heading">
@@ -30,15 +60,20 @@ const Login = () => {
               <input
                 className="login-heading-input"
                 placeholder="Insert your password"
+                name="password"
+                value={password}
+                onChange={handlePasswordChange}
               ></input>
             </div>
           </div>
-
+          {error && <p>{error}</p>}
           <div className="login-button">
-            <button className="login-button-signup">Login In</button>
+            <button className="login-button-signup" onClick={handleLogin}>Login In</button>
             <div className="login-button-signin">
               <h1 className="login-button-heading">Don't have an account?</h1>
-              <a className="login-register-heading" href="#">Register</a>
+              <a className="login-register-heading" href="#">
+                Register
+              </a>
             </div>
           </div>
         </div>
