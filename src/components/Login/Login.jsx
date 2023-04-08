@@ -45,7 +45,7 @@ const Login = () => {
             <button className="login-button-signup">Sign Up</button>
             <div className="login-button-signin">
               <h1 className="login-button-heading">Don't have an account?</h1>
-              <a className="" href="#">Register</a>
+              <a className="login-register-heading" href="#">Register</a>
             </div>
           </div>
         </div>
